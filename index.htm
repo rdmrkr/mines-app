@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/startSectionStyles.css">
+    <link rel="stylesheet" href="styles/popupStyles.css">
+    <link rel="stylesheet" href="styles/gameSectionStyles.css">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="apple-mobile-web-app-status-bar" content="#1b1926">
+    <meta name="theme-color" content="#1b1926">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
+</head>
+<body>
+    <div id="popup-body">
+        <div id="error">
+            <span>Ошибка: Аккаунта не существует или на нем менее 1000 ₽</span>
+        </div>
+        <div id="popup">
+            <span>На балансе аккаунта должна быть сумма более 1000 ₽</span>
+            <input type="text" placeholder="Введите ваш игровой ID" id="id-input"/>
+            <button class="submit" id="id-submit-button"><span>Активировать</span></button>
+            <button id="close-popup"><img src="assets/cross-icon.svg" alt="close"/></button>
+        </div>
+    </div>
+    <header>
+        <img src="assets/icon.svg" alt="icon"/>
+        <h1>MINESAIBOT</h1>
+        <h1 id="id-label">ID 123</h1>
+    </header>
+    <section id="start-section">
+        <header>
+        <span>MINES AI BOT</span>
+        <span>Данный бот поможет вам получать
+гарантированные прогнозы для игры MINES на проекте BetusX</span>
+        </header>
+        <div class="card">
+            <img src="assets/service-icon.svg" alt="betusx"/>
+            <img src="assets/mode-preview.png" alt="preview"/>
+        </div>
+        <button class="submit" id="enter-button"><span>Войти</span></button>
+    </section>
+    <section id="game-section">
+        <div class="field-box">
+            <div id="loader"></div>
+            <div class="field" id="field">
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <span>Количество бомб</span>
+                <span id="bomb-count">-</span>
+            </div>
+            <div class="stat">
+                <span>Уровень</span>
+                <span id="level">-</span>
+            </div>
+            <div class="stat">
+                <span>Ставка</span>
+                <span id="bet">-</span>
+            </div>
+        </div>
+        <button class="submit" id="play-button"><span>Анализировать игру</span></button>
+    </section>
+
+    <script src="javascript/popupLogic.js"></script>
+    <script src="javascript/pageSwitchLogic.js"></script>
+    <script src="javascript/gamePageLogic.js"></script>
+</body>
+</html>
